@@ -114,7 +114,7 @@ object
 let userr= {
     age : 40 ,
     doubleAge: function () {
-        return userr.age * 2;
+        return this.age * 2;
     }
 }
 console.log(userr);
@@ -124,7 +124,31 @@ let obj = Object.create({});
 obj.a = 100;
 console.log(obj);
 let copyObj = Object.create(userr);
-
+copyObj.age = 30;
 console.log(copyObj);
 console.log(copyObj.age);
 console.log(copyObj.doubleAge());
+/*
+object
+-create object with assign  method
+*/
+let obj1 ={
+    prop1: 1,
+    meth1: function () {
+        return this.prop1
+    }
+}
+let obj2 ={
+    prop2: 2,
+    meth2: function () {
+        return this.prop2
+    }
+}
+let targetObject = {
+    prop1: 1,
+    prop3: 3,
+}
+let finalObject = Object.assign(targetObject, obj1,obj2);
+console.log(finalObject);
+let newObj = Object.assign({},obj1,{prop5 : 5,prop6 : 6})
+console.log(newObj);
