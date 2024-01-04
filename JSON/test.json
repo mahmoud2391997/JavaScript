@@ -1,0 +1,11 @@
+{
+    "string":"elzero",
+    "number":100,
+    "object":{
+        "EG":"Giza",
+        "KSA": "geddah"
+    },
+    "array":["html","css","js"],
+    "boolean": true,
+    "null":null
+}
